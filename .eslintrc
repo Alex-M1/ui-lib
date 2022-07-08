@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "airbnb"
+  ],
+  "plugins": [
+    "react",
+    "typescript",
+    "react-hooks",
+    "@typescript-eslint"
+  ],
+  "env": {
+    "jest": true,
+    "browser": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "rules": {}
+}
