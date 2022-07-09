@@ -13,5 +13,30 @@
     "browser": true
   },
   "parser": "@typescript-eslint/parser",
-  "rules": {}
+  "rules": {
+    "import/no-unresolved": "off",
+    "import/extensions": [
+      "error",
+      {
+        "ts": "never",
+        "tsx": "never",
+        "json": "never"
+      }
+    ],
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "arrow-function"
+      }
+    ],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+          ".jsx",
+          ".tsx"
+        ]
+      }
+    ]
+  }
 }

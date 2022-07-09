@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --cache",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -12,8 +13,13 @@
     "type": "git",
     "url": "git+https://github.com/Alex-M1/ui-lib.git"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run lint && yarn tsc"
+    }
+  },
   "keywords": [],
-  "author": "",
+  "author": "alex94.malik@gmail.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Alex-M1/ui-lib/issues"
@@ -39,6 +45,7 @@
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-typescript": "^0.14.0",
+    "husky": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.5",
