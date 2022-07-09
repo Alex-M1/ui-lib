@@ -30,6 +30,15 @@
       ],
       "@components/*": [
         "./src/components/*"
+      ],
+      "@constants/*": [
+        "./src/constants/*"
+      ],
+      "@helpers/*": [
+        "./src/helpers/*"
+      ],
+      "@commonTypes/*": [
+        "./src/commonTypes/*"
       ]
     },
     "target": "es5",
