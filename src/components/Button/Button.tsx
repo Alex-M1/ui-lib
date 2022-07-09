@@ -1,11 +1,11 @@
 import React, { ReactNode } from 'react';
 import { StButton } from './styled';
 
-const Button: React.FC<IProps> = ({ children, content, ...props }) => {
+const Button: React.FC<Props> = ({ children, content, ...props }) => {
   const a = 1;
   return <StButton {...props}>{children || content}</StButton>;
 };
-type IProps = {
+export interface Props {
   children?: string | ReactNode;
   content?: string;
   isLoading?: boolean;
