@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
+import { StButton } from './styled';
 
-interface IProps {
-
-}
-
-const Button: React.FC<IProps> = ({ }) => {
+const Button: React.FC<IProps> = ({ children, content, ...props }) => {
   const a = 1;
-  return <div>123</div>;
+  return <StButton {...props}>{children || content}</StButton>;
 };
+type IProps = {
+  children?: string | ReactNode;
+  content?: string;
+  isLoading?: boolean;
+}
 
 export default Button;
