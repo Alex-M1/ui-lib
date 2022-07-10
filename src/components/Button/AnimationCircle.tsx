@@ -2,7 +2,12 @@ import React, { useEffect, useRef } from 'react';
 import { StCircleAnimation } from './styled';
 import { AnimationCircleProps } from './types';
 
-const AnimationCircle: React.FC<AnimationCircleProps> = ({ posX, posY, color }) => {
+const AnimationCircle: React.FC<AnimationCircleProps> = ({
+  posX,
+  posY,
+  color,
+  variant,
+}) => {
   const circleRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -12,7 +17,7 @@ const AnimationCircle: React.FC<AnimationCircleProps> = ({ posX, posY, color }) 
     }
   }, []);
 
-  return <StCircleAnimation color={color} ref={circleRef} />;
+  return <StCircleAnimation variant={variant} color={color} ref={circleRef} />;
 };
 
 export default AnimationCircle;

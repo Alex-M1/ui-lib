@@ -22,6 +22,10 @@ module.exports = {
         configFile: path.resolve(__dirname, "../tsconfig.json"),
       })
     );
+    config.module.rules.push({
+      test: /\.(jpe?g|png|ttf|woff|woff2|eot|svg)$/,
+      use: ['url-loader?limit=100000'],
+    })
     return config;
   }
 }

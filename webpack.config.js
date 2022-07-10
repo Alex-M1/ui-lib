@@ -24,6 +24,10 @@ module.exports = {
         exclude: /node_modules/,
         use: ['ts-loader'],
       },
+      {
+        test: /\.(jpe?g|png|ttf|woff|woff2|eot|svg)$/,
+        use: ['url-loader?limit=100000'],
+      },
     ],
   },
 };

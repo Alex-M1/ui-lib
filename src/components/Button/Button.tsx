@@ -3,6 +3,13 @@ import { randomId } from '@helpers/idGenerate';
 import AnimationCircle from './AnimationCircle';
 import { StButton, StCircleContainer } from './styled';
 import { ButtonProps } from './types';
+import MyImageSvg from '../../assets/icons/save.svg';
+
+const Icon = () => (
+  <svg className="ico" color="black" fill="blue" width={24} height={24}>
+    <use href={MyImageSvg} width={10} height={10} />
+  </svg>
+);
 
 const Button: React.FC<ButtonProps> = ({
   content,
@@ -13,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({
   isLoading,
 }) => {
   const [circle, setCircle] = useState<Array<JSX.Element>>([]);
-
+  // console.log(MyImageSvg);
   const handleMouseUp = () => setTimeout(() => (
     setCircle((prev) => prev.filter((_el, i) => i !== 0))
   ), 350);
@@ -29,7 +36,7 @@ const Button: React.FC<ButtonProps> = ({
   const createCircleIcon = (posX: number, posY: number) => {
     setCircle((prev) => [
       ...prev,
-      <AnimationCircle color={color} posX={posX} posY={posY} key={randomId()} />,
+      <AnimationCircle variant={variant} color={color} posX={posX} posY={posY} key={randomId()} />,
     ]);
   };
 
@@ -37,12 +44,14 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <StButton
+      color={color}
+      variant={variant}
       onClick={handleClick}
       onMouseUp={handleMouseUp}
-      onMouseDown={handleMouseDown}
-      color={color}
       isLoading={isLoading}
+      onMouseDown={handleMouseDown}
     >
+      <Icon />
       <StCircleContainer>
         {circle}
       </StCircleContainer>

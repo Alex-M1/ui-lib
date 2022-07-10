@@ -14,6 +14,7 @@ export interface AnimationCircleProps {
   posX: number;
   posY: number;
   color: Color;
+  variant: ButtonVariantType;
 }
 
 export interface StyleButtonProps {

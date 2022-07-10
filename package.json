@@ -5,10 +5,10 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "dev": "start-storybook -p 6006",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --cache",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -56,6 +56,7 @@
     "tsconfig-paths-webpack-plugin": "^3.5.2",
     "typescript": "^4.7.4",
     "typescript-eslint-parser": "^22.0.0",
+    "url-loader": "^4.1.1",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0"
   },
